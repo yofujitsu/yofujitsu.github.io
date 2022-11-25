@@ -536,6 +536,7 @@ section.gallery{
 }
 
 .members-item-inner {
+    border-radius: 2rem;
     position:relative;
     display: flex;
     overflow:hidden;
@@ -694,6 +695,7 @@ section.gallery{
 /* СТИЛИЗАЦИЯ КРЕДИТС АЙТЕМА */
 
 .credits-item-inner {
+    border-radius: 2rem;
     position:relative;
     display: flex;
     overflow:hidden;
@@ -771,6 +773,7 @@ section.gallery{
 
 /* СТИЛИЗАЦИЯ СТЕШ АЙТЕМА */
 .stash-item-inner {
+    border-radius: 2rem;
     position:relative;
     display: flex;
     overflow:hidden;
@@ -842,6 +845,7 @@ section.gallery{
 }
 /* СТИЛИЗАЦИЯ БИТС АЙТЕМА */
 .beats-item-inner {
+    border-radius: 2rem;
     position:relative;
     display: flex;
     overflow:hidden;
