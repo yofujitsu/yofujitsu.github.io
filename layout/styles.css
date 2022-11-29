@@ -211,7 +211,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
-    padding: 20px 40px;
+    padding: 10px 40px;
     background-color: #111111;
     z-index: 100000;
 }
@@ -223,7 +223,7 @@ header.sticky {
 
 header.sticky .logo {
     filter: invert(1);
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 header.sticky .logo:hover {
@@ -242,7 +242,7 @@ header.sticky li a:after {
     height: 2px; 
     width: 0%; 
     background-color: #111111; 
-    transition: width 0.3s ease-in-out;
+    transition: width 0.1s ease-in-out;
 }
 
 header.sticky li a:hover:after,
