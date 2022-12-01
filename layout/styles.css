@@ -111,7 +111,7 @@ body {
 /* КОНТЕЙНЕР КРЕДИТСОВ */
 
 .credits {
-    margin: 0 10rem;
+    margin: 0 4rem;
     margin-top: 10rem;
 }
 .credits-list {
@@ -148,7 +148,7 @@ body {
 
 /* КОНТЕЙНЕР СТЕШКИТОВ */
 .stash-kits {
-    margin: 0 10rem;
+    margin: 0 4rem;
     margin-top: 10rem;
 }
 
@@ -168,7 +168,7 @@ body {
 
 /* КОНТЕЙНЕР БИТОВ */
 .beatpacks {
-    margin: 0 10rem;
+    margin: 0 4rem;
     margin-top: 10rem;
 }
 
@@ -213,7 +213,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.3s;
     padding: 10px 40px;
     background-color: #111111;
     z-index: 100000;
@@ -519,7 +519,7 @@ section.gallery{
 /* КОНТЕЙНЕР УЧАСТНИКОВ */
 
 .members {
-    margin: 0 10rem;
+    margin: 0 3rem;
     display: block;
     margin-top: 10rem;
 }
@@ -734,13 +734,13 @@ section.gallery{
 .members-own-logos {
 	display: flex;
 	justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow: hidden;
-    left: 0;
-    top: 0;
-    gap: .5rem;
+	    align-items: center;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    overflow: hidden;
+	    left: 0;
+	    top: 0;
+	    gap: .5rem;
 }
 
 .members-own-logos-item:hover {
