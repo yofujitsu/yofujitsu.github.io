@@ -24,6 +24,7 @@ h3,
 h4,
 h5 {
     margin: 1rem;
+    font-weight: 300;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
     font-size: 18px;
     color:#fff;
     min-width: 320px;
+    font-weight: 300;
 }
 /* ОБЩИЕ БЛОКИ */
 
@@ -157,13 +159,49 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 /* СТЕШКИТ АЙТЕМ */
 .stash-item{
     padding: 0px;
     margin: 0 10px 10px;
+}
+
+
+/* КОНТЕЙНЕР РЕЛИЗОВ НА МЕЙНЕ */
+.releases-list {
+    display: flex;
+    flex-direction: row wrap;
+    justify-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* РЕЛИЗ АЙТЕМ */
+.releases-item{
+    position: relative;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.releases-item-inner {
+    border-radius: 2rem;
+    position:relative;
+    display: flex;
+    align-self: center;
+    overflow:hidden;
+}
+
+.releases-item-img {
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 2rem;
+}
+
+.releases-item-inner-hover:hover .releases-item-img{
+    filter: brightness(50%); 
 }
 
 /* КОНТЕЙНЕР БИТОВ */
@@ -194,7 +232,7 @@ body {
 .community-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -665,7 +703,7 @@ section.gallery{
     left: 0;
     top: 0;
     right: 0;
-    bottom: 39%;
+    bottom: 55%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -972,74 +1010,6 @@ section.gallery{
     filter: brightness(30%)
 }
 
-.container{
-    padding: 4%;
-    max-width: 1200px;
-    background-color:transparent;
-    margin: 0 auto;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-.gallery__item {
-    overflow: hidden;
-    position: relative;
-    flex: 1 1 25%;
-    z-index: 1;
-}
-.gallery__description{
-    position: absolute;
-    padding: 2%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #111111;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 1s;
-}
-.gallery__item:hover .gallery__description{
-    opacity: 1;
-}
-.gallery__description:hover ~ .gallery__img{
-    transform: scale(1.5);
-}
-.gallery__img{
-    z-index: 1;
-    width: 100%;
-    transition: all 5s ease;
-}
-@media (max-width:1300px) {
-    .container {
-        max-width: 970px;
-    }
-}
-
-@media (max-width:992px) {
-    .container {
-        max-width: 750px;
-    }
-
-    .gallery__item {
-        flex: 1 1 50%;
-    }
-}
-
-@media (max-width:767px) {
-    .container{
-        max-width: none;
-    }
-    .gallery__item {
-        flex: 1 1 100%;
-    }
-}
-
 /* КНОПКА НАЗАД */
 .back-link {
     padding-top: 10px;
@@ -1169,7 +1139,7 @@ a#link:focus:after {
   }
   
   .slider .slide .info h2{
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 1000;
   }
   
@@ -1239,7 +1209,7 @@ a#link:focus:after {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem 1rem;
     cursor: pointer;
     border-radius: 3rem;
@@ -1294,17 +1264,23 @@ a#link:focus:after {
   
   @media (max-width: 600px){
     .slider .slide .info h2{
-      font-size: 1.5em;
+      font-size: 1em;
       line-height: 40px;
     }
   
     .slider .slide .info p{
-      font-size: 0.8em;
+      font-size: 0.5em;
     }
   }
         
 
 /* СТИЛИЗАЦИЯ ФУТЕРА */
+.container{
+    padding: 4%;
+    max-width: 1200px;
+    background-color:transparent;
+    margin: 0 auto;
+}
 
 .footer-container{
 	max-width: 1170px;
@@ -1417,4 +1393,131 @@ ul{
   
   /* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
   .show {display:block;}
+
+.latest-releases {
+    width: 100%;
+    height: 30em;
+    background-image: url("//cdn.shopify.com/s/files/1/0011/6005/2795/files/4c5a44ec51a79cf494c74f82d07756ae_1500x.jpg?v=1641982368");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.releases-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.release-button {
+    background-color: #111111;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: .1s;
+  }
+
+  .release-button:hover {
+    background-color: transparent;
+    color: #111111;
+    border: 2px solid #111111;
+  }
+
+  .sections {
+    width: 100%;
+    height: 35em;
+    background-image: url("https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/169_3_convert.io_1.png?v=1660036111");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-top: 2rem;
+  }
+
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .section-list {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  .section-item {
+    width: 16rem;
+    height: 22em;
+    border-radius: 2rem;
+  }
+
+  .section-item-inner {
+    border-radius: 2rem;
+    position:relative;
+    display: flex;
+    overflow:hidden;
+}
+
+.section-item-img {
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 2rem;
+}
+
+.section-item-inner-hover:hover .section-item-img{
+    filter: brightness(80%); 
+}
+
+  .vision {
+    width: 100%;
+    height: 20em;
+    background-image: url("https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/169_14.jpg?v=1666177850");
+    background-position:bottom;
+    background-size: cover;
+  }
+
+  .vision-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .vision-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 5rem;
+  }
+
+  .email-us {
+    width: 100%;
+    height: 15em;
+  }
+
+  .email-us-inner {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .btn-email{
+    background-color: white;
+    border: none;
+    color: #111111;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem 1rem;
+    cursor: pointer;
+    border-radius: 10rem;
+  }
 
