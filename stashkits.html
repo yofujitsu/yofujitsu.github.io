@@ -30,9 +30,23 @@
   </header>
   <main>
     <div class="stash-kits">
-        <h2 align="center" id="kits">Звуковые наборы</h2>
+        <h2 align="center" id="kits-title">Звуковые наборы</h2>
+        <h3 align="center">В этом разделе вы можете ознакомиться со звуковыми наборами, которые мы выпустили и фильтровать их по конкретному значению. Раздел будет пополняться!</h3>
+        <div class="membrs-btns">
+          <input id="searchbar" onkeyup="searchByOwner()" type="text"
+          name="search" placeholder="Искать по участнику">
+          <button onclick="dropDown()" class="dropbtn">Фильтр</button>
+          <div class="dropdown-menu" id="dropdown">
+            <li><a id="free-kits">Платные</a></li>
+            <li><a id="nonfree-kits">Бесплатные</a></li>
+            <li><a id="drum-kits">Drum kit</a></li>
+            <li><a id="loop-kits">Loop kit</a></li>
+            <li><a id="stash-kits">Stash kit</a></li>
+            <li><a id="all-kits">Показать все</a></li>
+          </div>
+        </div>
         <div class="stash-list">
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="fumiko!">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/fumikoo?z=photo-205617139_457239358%2Falbum-205617139_00%2Frev" target="_blank">
@@ -45,7 +59,7 @@
             </div>
             <p align="center">fumiko! w1nt3rwipclub! drumkit!</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="enwy mansion">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/enwymansion?w=wall-199900436_2006" target="_blank">
@@ -58,7 +72,7 @@
             </div>
             <p align="center">enwy mansion #twilight drumkit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="loop" own="enwy mansion">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/enwymansion?w=wall-199900436_1854" target="_blank">
@@ -71,7 +85,7 @@
             </div>
             <p align="center">enwy mansion WiSH3S loop kit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="tamukuro">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/tamukuroo?w=wall-206708197_332" target="_blank">
@@ -84,7 +98,7 @@
             </div>
             <p align="center">tamukuro forest drumkit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="fumiko!">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://www.youtube.com/watch?v=hAuIgaku1BQ" target="_blank">
@@ -97,7 +111,7 @@
             </div>
             <p align="center">bleedingsummer loop kit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="tcl">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://www.youtube.com/watch?v=zFCVpD-TZ30&t=10s" target="_blank">
@@ -110,7 +124,7 @@
             </div>
             <p align="center">brand new drumkit (tcl)</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="tamukuro">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/tamukuroo?w=wall-206708197_238" target="_blank">
@@ -123,7 +137,7 @@
             </div>
             <p align="center">tamukuro bl00d7 drumkit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="false" type="drum" own="fumiko!">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/fumikoo?w=wall-205617139_1371" target="_blank">
@@ -136,7 +150,7 @@
             </div>
             <p align="center">#bounce drumkit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="fuji! envyy">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/1envyy?w=wall-202910706_192" target="_blank">
@@ -149,7 +163,7 @@
             </div>
             <p align="center">yokito loop kit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="young freezy runawway">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/youngfreezymusic?w=wall-83953864_21113" target="_blank">
@@ -162,7 +176,7 @@
             </div>
             <p align="center">Galaxy Loop kit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="runawway">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://drive.google.com/file/d/1svJHTs9xFXiDISSYNQSfXxBqTLToi4Bg/view?usp=sharing" target="_blank">
@@ -175,7 +189,7 @@
             </div>
             <p align="center">runawway ✧ loop kit #1</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="runawway">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://drive.google.com/file/d/1-TZULH5Of8CmTZ_00ettxzZfxUYgA_VR/view" target="_blank">
@@ -188,7 +202,7 @@
             </div>
             <p align="center">runawway ✧ loop kit #2</p>
           </div> 
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="loop" own="gethatway">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/gethatway?w=wall-213092150_20" target="_blank">
@@ -201,7 +215,7 @@
             </div>
             <p align="center">Chromehearts loop kit</p>
           </div>
-          <div class="stash-item">
+          <div class="stash-item" free="true" type="stash" own="envyy">
             <div class="stash-item-inner">
               <div class="hover-image-scale">
                 <a href="https://vk.com/1envyy?w=wall-202910706_287" target="_blank">
@@ -215,6 +229,9 @@
             <p align="center">envyy! antisocial. stash kit</p>
           </div>
         </div>
+      </div>
+      <div class="back-to-top" id="back-to-top">
+        <i class="fa-solid fa-arrow-up" style="font-size:2rem;"></i>
       </div>
     </main>
     <footer class="footer">
@@ -257,6 +274,6 @@
         </div>
       </div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/stashkits.js"></script>
 </body>
 </html>

@@ -1,9 +1,19 @@
+var header = document.querySelector("header");
+var btn = document.querySelector(".back-to-top");
+
 window.addEventListener("scroll", function() {
-    var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+window.onscroll = () => {
+  if(window.scrollY > 100) {
+    btn.classList.add('active');
+  } else btn.classList.remove('active');
+}
 
+btn.onclick = () => {
+  window.scrollTo(0, 0);
+}
 
 const slider = document.querySelector(".slider");
 const nextBtn = document.querySelector(".next-btn");

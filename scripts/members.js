@@ -58,7 +58,7 @@ window.onclick = function(event) {
   }
 
 function search() {
-    let input = document.getElementById('searchbar').value
+    let input = document.getElementById('searchbar').value;
     input=input.toLowerCase();
     let elems = document.querySelector(".members-list");
     for (i = 0; i < elems.children.length; i++) { 

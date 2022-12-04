@@ -1535,6 +1535,7 @@ ul{
   /* Выпадающее содержимое (скрыто по умолчанию) */
   .dropdown-menu {
     display: none;
+    cursor: pointer;
     position: absolute;
     background-color: #111111;
     margin-top: 8rem;
@@ -1782,4 +1783,27 @@ ul{
         cursor: pointer;
         border-radius: 10rem;
       }
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: -5rem;
+    right: 5rem;
+    background: white;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .back-to-top.active {
+    bottom: 5rem;
+    transition: 0.3s linear;
+  }
+
+  .fa-arrow-up {
+    color:#111111;
   }
