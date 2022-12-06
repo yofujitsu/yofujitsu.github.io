@@ -322,7 +322,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 /* БИТ АЙТЕМ */
