@@ -114,9 +114,24 @@ body {
 /* КОНТЕЙНЕР КРЕДИТСОВ */
 
 .credits {
-    margin: 0 4rem;
+    margin: 0 5%;
     margin-top: 10rem;
 }
+
+@media(max-width: 768px) {
+    .credits {
+        margin: 0 5%;
+        margin-top: 8rem;
+    }
+    
+    .credits h2{
+        font-size: 16px;
+    }
+    .credits h3{
+        font-size: 10px;
+    }
+}
+
 .credits-list {
     display: flex;
     flex-direction: row;
@@ -151,8 +166,44 @@ body {
 
 /* КОНТЕЙНЕР СТЕШКИТОВ */
 .stash-kits {
-    margin: 0 4rem;
+    margin: 0 5%;
     margin-top: 10rem;
+}
+
+@media(max-width: 768px) {
+    .stash-kits {
+        margin: 0 5%;
+        margin-top: 8rem;
+    }
+    
+    .stash-kits h2{
+        font-size: 24px;
+    }
+    .stash-kits h3{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 550px) {
+    .stash-kits .dropdown-menu{
+        width: 50%;
+        margin-left: 50vw;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 400px) {
+    .stash-kits .dropdown-menu{
+        width: 50%;
+        margin-left: 40vw;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 540px) {
+    .stash-kits h3{
+        font-size: 10px;
+    }
 }
 
 .stash-list {
@@ -240,9 +291,31 @@ body {
 
 /* КОНТЕЙНЕР БИТОВ */
 .beatpacks {
-    margin: 0 4rem;
+    margin: 0 5%;
     margin-top: 10rem;
 }
+
+@media(max-width: 768px) {
+    .beatpacks {
+        margin: 0 5%;
+        margin-top: 8rem;
+    }
+    
+    .beatpacks h2{
+        font-size: 24px;
+    }
+    .beatpacks h3{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 540px) {
+    .beatpacks h3{
+        font-size: 10px;
+    }
+}
+
+
 
 .beats-list {
     display: flex;
@@ -260,7 +333,7 @@ body {
 
 /* КОНТЕЙНЕР СОЦСЕТЕЙ (ЛАСТ СТР) */
 .community {
-    margin-top: 10rem;
+    margin-top: 7rem;
 }
 
 .community-list {
@@ -663,9 +736,22 @@ section.gallery{
 /* КОНТЕЙНЕР УЧАСТНИКОВ */
 
 .members {
-    margin: 0 3rem;
-    display: block;
+    margin: 0 5%;
     margin-top: 10rem;
+}
+
+@media(max-width: 768px) {
+    .members {
+        margin: 0 5%;
+        margin-top: 8rem;
+    }
+    
+    .members h2{
+        font-size: 20px;
+    }
+    .members h4{
+        font-size: 12px;
+    }
 }
 
 .members-list {
@@ -676,7 +762,7 @@ section.gallery{
     overflow: hidden;
 }
 
-/* МЕМБЕР АЙТЕМ + АНИМАИЯ БЛОКА */
+/* МЕМБЕР АЙТЕМ + АНИМАЦИЯ БЛОКА */
 
 .members-item{
     padding: 5px;
@@ -1155,8 +1241,8 @@ a#link:focus:after {
     border-color: white;
     border-radius: 1rem;
     padding: .7rem;
-    margin: 1rem;
-    min-width: 160px;
+    margin: .5rem;
+    min-width: 100px;
     font-size: large;
     font-family: 'Exo 2', sans-serif;
     background-color: #111111;
@@ -1164,15 +1250,18 @@ a#link:focus:after {
 }
 
 @media (max-width: 550px){
-    .membrs-btns button {
+    .membrs-btns button, input{
         border-color: white;
         border-radius: 2rem;
-        margin: 1rem;
-        padding: .5rem;
-        font-size: medium;
+        padding: 5%;
+        margin: 5%;
+        font-size: small;
         font-family: 'Exo 2', sans-serif;
         background-color: #111111;
         color: white;
+    }
+    .membrs-btns {
+        margin: 10% 50%;
     }
 
     .show {
@@ -1303,16 +1392,6 @@ a#link:focus:after {
     margin: 1rem 1rem;
     cursor: pointer;
     border-radius: 3rem;
-  }
-
-  .info-button:hover {
-    background-color: transparent;
-    color: #111111;
-    border: 2px solid #111111;
-  }
-
-  .info-button:hover a{
-    color: #111111;
   }
 
   @media (max-width: 1200px){
@@ -1526,6 +1605,7 @@ ul{
   
   /* Контейнер <div> - необходим для размещения выпадающего содержимого */
   .membrs-btns {
+    margin: 1% 10%;
     position: relative;
     display:flex;
     justify-content: center;
@@ -1589,14 +1669,6 @@ ul{
     border-radius: 3rem;
     transition: .1s;
   }
-
-  .release-button:hover {
-    background-color: transparent;
-    color: #111111;
-    border: 2px solid #111111;
-  }
-
-
 
   .sections {
     width: 100%;
@@ -1687,8 +1759,8 @@ ul{
     display: flex;
     flex-direction: column;
     align-items:center;
-    font-size: 2vw;
-    margin: 0;
+    font-size: 1.8vw;
+    margin: 3% 0;
   }
 
   .vision-wrapper-inner h2{
@@ -1715,6 +1787,7 @@ ul{
   }
 
   .email-us-inner {
+    margin: 5% 0;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -1736,6 +1809,10 @@ ul{
         font-size: 1.5vw;
         width: 10vw;
         height: 3.5vw;
+    }
+
+    .email-input {
+        margin: 2% 0;
     }
 
   .btn-email{
@@ -1806,4 +1883,59 @@ ul{
 
   .fa-arrow-up {
     color:#111111;
+  }
+
+  .community-block {
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .community-block p{
+    font-size: 2rem;
+  }
+
+  @media(max-width:1100px) {
+    .community-block p{
+        font-size: 1.2rem;
+      }
+    .community h1 {
+        font-size: 26px;
+    }
+    .community h2 {
+        font-size: 20px;
+    }
+  }
+  @media(max-width:768px) {
+    .community-block p{
+        font-size: 1rem;
+      }
+      .community h1 {
+        font-size: 20px;
+    }
+  }
+  @media(max-width:540px) {
+    .community h1 {
+        font-size: 1rem;
+    }
+    .community-block {
+        margin: 0 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 15% 1fr 15% 1fr 15%;
+      }
+      .community h2 {
+        font-size: 16px;
+    }
+
+    #bot {
+        margin-top: 12%;
+    }
+  }
+
+  @media(max-width:370px) {
+    .community-block {
+        grid-template-rows:1fr 15% 1fr 20% 1fr 15%;
+      }
   }
