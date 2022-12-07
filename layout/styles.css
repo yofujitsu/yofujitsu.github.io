@@ -347,7 +347,7 @@ body {
 /* СОЦСЕТИ АЙТЕМ */
 .community-item{
     padding: 0;
-    margin: 1rem;
+    margin: 0 0 .1rem 1rem; /* top right bottom left */
 }
 @media(max-width: 1024px){
     .socials-block h2 {
@@ -1912,6 +1912,7 @@ ul{
     grid-template-columns: 50% 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
+  
 
   .community-block p{
     font-size: 2rem;
@@ -1935,6 +1936,9 @@ ul{
       .community h1 {
         font-size: 20px;
     }
+    #release {
+        font-size: 20px;
+    }
   }
   @media(max-width:540px) {
     .community h1 {
@@ -1946,10 +1950,19 @@ ul{
         grid-template-columns: 1fr;
         grid-template-rows:1fr 15% 1fr 15% 1fr 15%;
       }
+     .playlists .community-block {
+        margin: 0 5%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:repeat(6, 1fr);
+      }
+      .playlists .community-block p{
+        font-size: 14px;
+      }
+      
       .community h2 {
         font-size: 16px;
     }
-
     #bot {
         margin-top: 12%;
     }
@@ -1959,6 +1972,16 @@ ul{
     .community-block {
         grid-template-rows:1fr 15% 1fr 20% 1fr 15%;
       }
+     .playlists .community-block {
+        grid-template-rows:repeat(6, 1fr);
+      }
+  }
+
+  @media(max-width:540px) {
+    .playlists .hover-image-scale img {
+        width:30px;
+        height: 30px;
+    }
   }
 
   .bio-block {
