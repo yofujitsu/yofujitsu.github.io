@@ -2052,7 +2052,7 @@ ul{
   .bio-first-section-wrapper-inner #first-img{
     display: flex;
     width: 100%;
-    height: calc(80% + 1rem);
+    height: calc(90% + 1rem);
     float: right;
     align-self: center;
     border-radius: 50% 0 0 50%;
